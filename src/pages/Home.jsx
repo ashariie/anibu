@@ -7,12 +7,12 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
   const [anime, setAnime] = useState([]);
   const [manga, setManga] = useState([]);
-  const [animeapi, setAnimeapi] = useState(
-    "https://kitsu.io/api/edge/trending/anime"
-  );
-  const [mangaapi, setMangaapi] = useState(
-    "https://kitsu.io/api/edge/trending/manga"
-  );
+  // const [animeapi, setAnimeapi] = useState(
+  //   "https://kitsu.io/api/edge/trending/anime"
+  // );
+  // const [mangaapi, setMangaapi] = useState(
+  //   "https://kitsu.io/api/edge/trending/manga"
+  // );
 
   const fetchAnime = async (link) => {
     try {
@@ -34,15 +34,12 @@ const Home = () => {
   };
 
   useEffect(() => {
-    fetchAnime(animeapi);
-    return () => {
-      setAnimeapi({});
-    };
-  }, [animeapi]);
+    fetchAnime("https://kitsu.io/api/edge/trending/anime");
+  }, []);
 
   useEffect(() => {
-    fetchManga(mangaapi);
-  }, [mangaapi]);
+    fetchManga("https://kitsu.io/api/edge/trending/manga");
+  }, []);
 
   console.log(anime);
   console.log(manga);

@@ -148,12 +148,12 @@ const Anime = () => {
                 {anime.data.map((data) => (
                   <div
                     key={data.id}
-                    className="relative cursor-pointer items-center overflow-hidden rounded-xl text-xs opacity-90 hover:opacity-100 transition-all duration-300 delay-100 "
+                    className="relative cursor-pointer items-center overflow-hidden text-xs opacity-90 hover:opacity-100 transition-all duration-300 delay-100 "
                   >
                     <Link
                       key={(data.id, "link")}
                       to={`/detail/${data.type}/${data.id}`}
-                      className="flex flex-col w-full h-full border-r-2 border-teal-300 rounded-r-xl"
+                      className="flex flex-col w-full h-full border-2 border-teal-300"
                     >
                       <img
                         key={(data.id, "img")}
@@ -164,7 +164,7 @@ const Anime = () => {
 
                       <div
                         key={(data.id, "title")}
-                        className="absolute h-full w-full text-sm text-center opacity-0 hover:opacity-90 text-white border-b-4 border-teal-300 rounded-b-xl justify-center items-center overflow-clip"
+                        className="absolute h-full w-full text-sm text-center opacity-0 hover:opacity-90 text-white border-b-4 border-teal-300 justify-center items-center overflow-clip"
                       >
                         <div
                           key={(data.id, "text")}

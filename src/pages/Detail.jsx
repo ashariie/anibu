@@ -44,8 +44,8 @@ const Detail = () => {
               <p className="w-full"></p>
             </div>
           </div>
-          <div className="flex items-center space-y-3 md:space-y-5 my-5 w-full space-x-5">
-            <div className="flex h-60 w-52 md:h-80 md:w-60 overflow-hidden rounded-xl ">
+          <div className="flex items-center space-y-3 md:space-y-5 my-5 w-full space-x-5 px-5">
+            <div className="flex h-60 w-52 md:h-80 md:w-60 overflow-hidden rounded-xl border-2 border-teal-400">
               <img
                 src={data.attributes.posterImage.original}
                 alt={data.attributes.canonicalTitle}
@@ -71,7 +71,7 @@ const Detail = () => {
             </div>
           </div>
 
-          <article key={data.id} className="space-y-2">
+          <article key={data.id} className="space-y-2 p-5">
             {/* <p>Desctiption : </p>
             <p>{data.attributes.description}</p> */}
             <p>Synopsis : </p>
